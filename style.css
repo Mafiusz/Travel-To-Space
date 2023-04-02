@@ -1,0 +1,1034 @@
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --main-font: "Bellefair", serif;
+    --second-font: "Barlow", sans-serif;
+    --heading-1: 15rem;
+    --heading-2: 10rem;
+    --heading-3: 5.6rem;
+    --heading-4: 3.2rem;
+    --heading-5: 2.8rem;
+    --heading-5-space: 4.75px;
+    --subheading-1: 2.8rem;
+    --subheading-2: 1.4rem;
+    --subheading-2-space: 2.35px;
+    --subheading-3: 1.6rem;
+    --subheading-3-space: 2.7px;
+    --text: 1.8rem;
+    --dark: #0b0d17;
+    --light-blue: #d0d6f9;
+    --light: #ffffff;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 5rem);
+    justify-content: space-between;
+    margin: 4rem 0 0 5rem;
+    z-index: 2;
+}
+
+.line {
+    position: absolute;
+    margin-left: 20rem;
+    width: 60rem;
+    color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 3rem 10rem;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+}
+
+.nav-link {
+    list-style: none;
+    position: relative;
+}
+
+.border-bottom {
+    position: absolute;
+    bottom: -3rem;
+    left: 0;
+    right: 0;
+    color: var(--light);
+    display: block;
+}
+
+.border-bottom.hidden {
+    display: none;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: var(--light);
+    font-size: var(--subheading-3);
+    letter-spacing: var(--subheading-3-space);
+    text-transform: uppercase;
+    font-family: var(--second-font);
+}
+
+.number {
+    font-weight: 700;
+}
+
+.app-container {
+    width: 100%;
+    height: 100vh;
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    background: url(assets/home/background-home-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home-box {
+    width: 45rem;
+    position: absolute;
+    bottom: 20rem;
+    left: 18rem;
+}
+
+.heading-fifth {
+    font-size: var(--heading-5);
+    color: var(--light-blue);
+    letter-spacing: var(--heading-5-space);
+    font-family: var(--second-font);
+}
+
+.heading-primary {
+    font-family: var(--main-font);
+    font-size: var(--heading-1);
+    color: var(--light);
+}
+
+.home-text {
+    font-family: var(--second-font);
+    font-size: var(--text);
+    line-height: 3.2rem;
+    color: var(--light-blue);
+}
+
+.explore-box {
+    position: absolute;
+    bottom: 20rem;
+    right: 20rem;
+    width: 25rem;
+    height: 25rem;
+    background-color: var(--light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.explore-box:hover {
+    box-shadow: 0 0 0 8rem rgba(255, 255, 255, 0.2);
+}
+
+.heading-fourth {
+    color: var(--dark);
+    font-size: var(--heading-4);
+    letter-spacing: var(--subheading-2-space);
+    font-family: var(--main-font);
+    text-transform: uppercase;
+}
+
+.destination {
+    background: url(assets/destination/background-destination-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.heading-destination {
+    font-size: var(--heading-5);
+    letter-spacing: var(--heading-5-space);
+    font-family: var(--second-font);
+    color: var(--light);
+    text-transform: uppercase;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 130rem;
+    padding-left: 5rem;
+}
+
+.number-section {
+    color: rgba(255, 255, 255, 0.1);
+}
+
+.destination-box {
+    width: 130rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10rem;
+    position: absolute;
+    bottom: 10rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.planet-img-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.planet-items {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.planet-item {
+    font-size: var(--subheading-3);
+    letter-spacing: var(--subheading-3-space);
+    font-family: var(--second-font);
+    color: var(--light-blue);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-bottom: 1px solid transparent;
+}
+
+.planet-item:hover {
+    border-bottom-color: rgba(255, 255, 255, 0.5);
+}
+
+.planet-item.active {
+    color: var(--light);
+    border-bottom-color: var(--light);
+}
+
+.heading-secondary {
+    font-size: var(--heading-2);
+    color: var(--light);
+    font-family: var(--main-font);
+    text-transform: uppercase;
+    padding: 6rem 0 4rem;
+}
+
+.planet-description {
+    font-size: var(--text);
+    color: var(--light-blue);
+    font-family: var(--second-font);
+    line-height: 3.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.planet-line {
+    color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 2rem;
+    margin-top: auto;
+}
+
+.planet-distance-time {
+    display: flex;
+    gap: 10rem;
+}
+
+.distance-box {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.destination-description {
+    font-size: var(--subheading-2);
+    letter-spacing: var(--subheading-2-space);
+    color: var(--light-blue);
+    text-transform: uppercase;
+    font-family: var(--second-font);
+}
+
+.distance-value,
+.time-value {
+    font-size: var(--heading-5);
+    color: var(--light);
+    font-family: var(--main-font);
+    text-transform: uppercase;
+}
+
+.crew {
+    width: 100%;
+    height: 100vh;
+    background: url(assets/crew/background-crew-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.crew-content-box {
+    width: 130rem;
+    height: 70rem;
+    display: grid;
+    grid-template-columns: 67rem 1fr;
+    gap: 5rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.crew-img {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+/* .crew-image {
+    width: 100%;
+} */
+
+.crew-box {
+    display: flex;
+    flex-direction: column;
+    height: 70rem;
+    padding: 15rem 0 0 5rem;
+}
+
+.crew-job {
+    font-size: var(--heading-4);
+    font-family: var(--main-font);
+    color: var(--light);
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin: 4rem 0 2rem;
+}
+
+.crew-name {
+    font-size: var(--heading-3);
+    font-family: var(--main-font);
+    color: var(--light);
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.crew-description {
+    font-size: var(--text);
+    color: var(--light-blue);
+    font-family: var(--second-font);
+    line-height: 3.2rem;
+    width: 70%;
+    margin-bottom: auto;
+}
+
+.crew-select {
+    display: flex;
+    gap: 2.5rem;
+    margin-bottom: 5rem;
+}
+
+.crew-select div {
+    width: 1.5rem;
+    height: 1.5rem;
+    /* border: 1px solid var(--light); */
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.crew-select div:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.crew-select .crew-active {
+    background-color: var(--light);
+}
+
+.technology {
+    width: 100%;
+    height: 100vh;
+    background: url(assets/technology/background-technology-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.technology-box {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 5rem;
+    width: 130rem;
+    position: absolute;
+    bottom: 10rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: 5rem;
+}
+
+.technology-description {
+    display: flex;
+    gap: 10rem;
+    margin: auto 0;
+}
+
+.technology-description-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.technology-number {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+/* .technology-number-container {
+    width: 8rem;
+    height: 8rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.technology-number-container:hover {
+    border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.technology-number-value {
+    font-size: var(--heading-4);
+    font-family: var(--main-font);
+    color: var(--light);
+}
+
+.active-number-container {
+    background-color: var(--light);
+}
+
+.active-number-value {
+    color: var(--dark);
+} */
+
+.technology-number-container {
+    font-size: var(--heading-4);
+    font-family: var(--main-font);
+    color: var(--light);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    padding: 2rem;
+    width: 8rem;
+    height: 8rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.technology-number-container:hover {
+    border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.technology-number-container.active-number-container {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.technology-terminology {
+    font-size: var(--subheading-3);
+    letter-spacing: var(--subheading-3-space);
+    font-family: var(--second-font);
+    color: var(--light-blue);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.technology-name {
+    font-size: var(--heading-3);
+    font-family: var(--main-font);
+    color: var(--light);
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+}
+
+.technology-text {
+    font-size: var(--text);
+    font-family: var(--second-font);
+    color: var(--light-blue);
+    line-height: 3.2rem;
+    width: 80%;
+}
+
+.technology-img {
+    width: 100%;
+    /* background: url(assets/technology/image-launch-vehicle-portrait.jpg); */
+    /* background-position: center; */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.technology-img img {
+    width: 100%;
+}
+
+.icon {
+    position: absolute;
+    right: 2rem;
+    color: var(--light-blue);
+    height: 5rem;
+    cursor: pointer;
+}
+
+.open-navbar {
+    display: none;
+}
+.close-navbar {
+    display: none;
+}
+
+/* tablet 768 */
+/* phone 375 */
+
+@media (max-width: 1300px) {
+    .header {
+        width: 100%;
+    }
+
+    .explore-box {
+        bottom: 10rem;
+        right: 10rem;
+    }
+
+    .home-box {
+        bottom: 10rem;
+        left: 10rem;
+    }
+
+    .destination-box {
+        width: 100%;
+        gap: 5rem;
+    }
+
+    .heading-destination {
+        width: 110rem;
+    }
+
+    .crew-content-box {
+        width: 100%;
+    }
+
+    .line {
+        width: 50rem;
+        margin-left: 15rem;
+    }
+
+    .technology-box {
+        width: 100%;
+        bottom: 10rem;
+    }
+
+    .technology-name {
+        margin-bottom: 2rem;
+    }
+
+    .technology-description {
+        height: 45rem;
+        gap: 5rem;
+    }
+
+    .technology-number {
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .technology-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .crew-img {
+        width: 32%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .nav-link a {
+        font-size: 1.3rem;
+    }
+
+    .nav-links {
+        gap: 4rem;
+    }
+
+    .explore-box {
+        width: 17rem;
+        height: 17rem;
+    }
+
+    .explore-box:hover {
+        box-shadow: 0 0 0 5rem rgba(255, 255, 255, 0.2);
+    }
+
+    .home-box {
+        left: 5rem;
+        bottom: 8rem;
+    }
+
+    .heading-fifth {
+        font-size: var(--subheading-2);
+    }
+
+    .heading-primary {
+        font-size: var(--heading-2);
+    }
+
+    .home-text {
+        font-size: 1.5rem;
+    }
+
+    .heading-destination {
+        width: 90rem;
+    }
+
+    .destination-box {
+        bottom: 5rem;
+    }
+
+    .heading-secondary {
+        font-size: var(--heading-3);
+    }
+
+    .planet-description-text {
+        font-size: 1.5rem;
+    }
+
+    .destination-description {
+        font-size: var(--subheading-3);
+    }
+
+    .planet-distance-time {
+        gap: 5rem;
+    }
+
+    .distance-box {
+        width: 40%;
+    }
+
+    .crew-content-box {
+        grid-template-columns: 40rem 1fr;
+    }
+
+    .crew-box {
+        padding: 14rem 0 0 3rem;
+    }
+
+    .crew-select {
+        margin-bottom: 2rem;
+    }
+
+    .crew-job {
+        font-size: var(--heading-5);
+    }
+
+    .crew-name {
+        font-size: var(--heading-4);
+    }
+
+    .crew-img {
+        width: 100%;
+    }
+
+    .crew-image {
+        width: 100%;
+        height: 100%;
+        margin-top: auto;
+    }
+
+    .technology-name {
+        font-size: var(--heading-4);
+    }
+
+    .technology-text {
+        font-size: 1.5rem;
+    }
+
+    .technology-number {
+        justify-content: flex-start;
+        gap: 5rem;
+    }
+
+    .technology-description {
+        height: 40rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        padding: 3rem 7rem;
+    }
+
+    .explore-box {
+        right: 5rem;
+    }
+
+    .heading-destination {
+        width: 77rem;
+    }
+
+    .planet-image {
+        width: 90%;
+    }
+
+    .line {
+        width: 40rem;
+        margin-left: 10rem;
+    }
+
+    .crew-content-box {
+        height: 50rem;
+        gap: 0;
+    }
+
+    .crew-box {
+        padding: 0;
+        padding-left: 3rem;
+        height: 50rem;
+    }
+
+    .crew-image {
+        width: 80%;
+        height: 90%;
+    }
+
+    .crew-select {
+        margin-bottom: 4rem;
+    }
+
+    .crew-description {
+        width: 100%;
+    }
+
+    .technology-box {
+        gap: 2rem;
+    }
+
+    .technology-description {
+        gap: 3rem;
+    }
+
+    .technology-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .distance-box {
+        width: 50%;
+    }
+}
+
+@media (max-width: 770px) {
+    .home {
+        background: url(assets/home/background-home-tablet.jpg);
+    }
+
+    .header {
+        margin: 0;
+        padding-left: 3rem;
+    }
+
+    .navbar {
+        padding: 3rem 3rem;
+    }
+
+    .line {
+        width: 30rem;
+        margin-left: 10rem;
+    }
+
+    .number {
+        display: none;
+    }
+
+    .home-box {
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        top: 20rem;
+    }
+
+    .explore-box {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .heading-destination {
+        width: 100%;
+        font-size: 2rem;
+        top: 12%;
+        padding-left: 3rem;
+    }
+
+    .planet-image {
+        width: 35%;
+    }
+
+    .destination-box {
+        grid-template-columns: 1fr;
+        height: 63rem;
+    }
+
+    .planet-description {
+        width: 80%;
+        height: 32rem;
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+    }
+
+    .planet-line {
+        width: 100%;
+    }
+
+    .heading-secondary {
+        padding: 3rem 0 2rem;
+    }
+
+    .planet-distance-time {
+        gap: 0;
+        justify-content: space-between;
+        width: 80%;
+    }
+
+    .crew-content-box {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        height: 65rem;
+    }
+
+    .crew-box {
+        height: 30rem;
+        text-align: center;
+        align-items: center;
+        padding: 0 5rem;
+    }
+
+    .crew-image {
+        width: 50%;
+        height: auto;
+    }
+
+    .crew-job {
+        margin: 2rem 0 2rem;
+        font-size: 2.4rem;
+    }
+
+    .crew-name {
+        margin-bottom: 2rem;
+        font-size: 4rem;
+    }
+
+    .crew-description {
+        font-size: 1.6rem;
+        font-weight: 200;
+    }
+
+    .crew-select {
+        margin-bottom: 2rem;
+    }
+
+    .destination {
+        background: url(assets/destination/background-destination-tablet.jpg);
+    }
+
+    .crew {
+        background: url(assets/crew/background-crew-tablet.jpg);
+    }
+
+    .technology {
+        background: url(assets/technology/background-technology-tablet.jpg);
+    }
+
+    .destination-box {
+        gap: 2rem;
+        bottom: 0;
+    }
+
+    .crew-select div {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+    .technology-box {
+        grid-template-columns: 1fr;
+        padding-left: 0;
+        bottom: 3rem;
+    }
+
+    .technology-img {
+        width: 100%;
+        /* background: url(assets/technology/image-launch-vehicle-landscape.jpg); */
+        background-size: cover;
+        background-repeat: no-repeat;
+        grid-row: 1/2;
+    }
+
+    .technology-img img {
+        width: 100%;
+        height: 25rem;
+    }
+
+    .technology-description {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .technology-number {
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+    .technology-number-container {
+        width: 5.8rem;
+        height: 5.8rem;
+        font-size: 2.4rem;
+        padding: 1.4rem;
+    }
+
+    .technology-description-box {
+        text-align: center;
+    }
+
+    .technology-text {
+        width: 80%;
+        margin: 0 auto;
+        font-size: 1.4rem;
+    }
+
+    .technology-name {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding-left: 0;
+        padding-top: 2rem;
+    }
+
+    .logo {
+        padding-left: 3rem;
+    }
+
+    .navbar {
+        position: absolute;
+        top: -100vh;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.9);
+        /* display: none; */
+        transition: all 0.3s;
+    }
+
+    .navbar.show-navbar {
+        top: 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        height: 100%;
+        gap: 0;
+        justify-content: space-evenly;
+    }
+
+    .nav-link a {
+        font-size: 2rem;
+    }
+
+    .planet-distance-time {
+        width: 100%;
+    }
+
+    .crew-box {
+        padding: 0 2rem;
+        height: 35rem;
+    }
+
+    .crew-name {
+        font-size: 3rem;
+    }
+
+    .technology-img img {
+        height: 20rem;
+    }
+
+    .technology-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .technology-img {
+        height: 20rem;
+    }
+
+    .technology-box {
+        height: 60rem;
+        bottom: 1rem;
+    }
+
+    .home-box {
+        width: 100%;
+    }
+
+    .planet-description-text {
+        font-size: 1.2rem;
+    }
+
+    .destination-description {
+        font-size: 1.2rem;
+    }
+
+    .distance-value,
+    .time-value {
+        font-size: 2rem;
+    }
+
+    .heading-destination {
+        font-size: 1.6rem;
+    }
+}
