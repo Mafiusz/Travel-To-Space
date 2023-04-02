@@ -1,4 +1,4 @@
-# Tourly - Journey to explore world!
+# Travel To Space!
 
 This is a solution for [Space toursim multi-page website](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3) by Frontend Mentor
 
